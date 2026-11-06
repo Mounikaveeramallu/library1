@@ -16,6 +16,10 @@ const app = express();
 
 app.use(cors());
 
+const allowOrigins = [
+    'https://localhost:3000',
+    'https://library1-beryl.vercel.app'
+]
 app.use(express.json());
 app.use(cors());
 app.use("/api/dashboard",dashboardRoutes);
